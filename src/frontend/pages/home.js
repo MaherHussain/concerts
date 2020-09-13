@@ -2,7 +2,7 @@ window.handleHomeRequest = () => {
   document.body.innerHTML = `<h1>Home</h1>
   <a href="concerts" data-navigo>concerts</a>
   asd
-  <a href="concert/1" data-navigo>Contact/1</a>
+  <a href="concert/1" data-navigo>concert/1</a>
 
  
   `;
