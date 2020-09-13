@@ -2,9 +2,8 @@ window.handleHomeRequest = () => {
   document.body.innerHTML = `<h1>Home</h1>
   <a href="concerts" data-navigo>concerts</a>
   asd
-  <a href="concert/1" data-navigo>concert/1</a>
+  <a href="concerts/1" data-navigo>concerts/1</a>
 
- 
   `;
 
   // if any links are added to the dom, use this function
@@ -12,7 +11,7 @@ window.handleHomeRequest = () => {
   
 router.updatePageLinks();
 
-}
+};
 
 
 

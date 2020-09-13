@@ -20,12 +20,12 @@ window.handleContactsRequest = () => {
     </div>`;
 
   // make sure the backend api works before working with it here
-  fetch("/src/backend/api/concerts.js")
+  fetch("/api/concerts")
     .then((response) => response.json())
-    .then((concerts) => renderContacts(concerts));
+    .then((concerts) => renderConcerts(concerts));
 };
 
-function renderContacts(concerts) {
+function renderConcerts(concerts) {
   const table = document.querySelector("#table");
   const tbody = document.querySelector("tbody");
   concerts.forEach((concert) => {
