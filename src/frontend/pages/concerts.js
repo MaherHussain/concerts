@@ -20,7 +20,7 @@ window.handleContactsRequest = () => {
     </div>`;
 
   // make sure the backend api works before working with it here
-  fetch("/api/concerts")
+  fetch("/src/backend/api/concerts.js")
     .then((response) => response.json())
     .then((concerts) => renderContacts(concerts));
 };
