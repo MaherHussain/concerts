@@ -12,9 +12,9 @@ router.get("/", async (request, response) => {
     throw error;
   }
 });
-router.get("/?", async (request, response) => {
+router.get("/:id", async (request, response) => {
 
-  getLatestContacts(request.query.limit)
+  getConcertById({ id: request.params.id, body: request.body })
     .then((result) => response.json(result))
     .catch((ex) => {
       response.status(400).send("Bad request").end();
@@ -22,9 +22,11 @@ router.get("/?", async (request, response) => {
     });
 });
 
-const getLatestContacts = async (limit) => {
+const getConcertById = async ({ id, body }) => {
   try {
-    return await knex("concerts").select("*").orderBy("id", "DESC").limit(limit);
+     const { title, band, venue, created_date, performance_date, price } = body;
+
+    return await knex("concerts").select("*").where({ id: id });
   } catch (error) {
     console.log(error);
   }
