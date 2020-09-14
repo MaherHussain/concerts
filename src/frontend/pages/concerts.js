@@ -1,4 +1,5 @@
-window.handleContactsRequest = () => {
+// @ts-ignore
+window.handleConcertsRequest = () => {
   document.body.innerHTML = `
   <h1>Contacts</h1>
    <div id="contacts">

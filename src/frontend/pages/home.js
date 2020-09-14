@@ -1,3 +1,4 @@
+// @ts-ignore
 window.handleHomeRequest = () => {
   document.body.innerHTML = `<h1>Home</h1>
   <a href="concerts" data-navigo>concerts</a>
