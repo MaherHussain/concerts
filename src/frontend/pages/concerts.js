@@ -1,8 +1,8 @@
 // @ts-ignore
 window.handleConcertsRequest = () => {
   document.body.innerHTML = `
-  <h1>Contacts</h1>
-   <div id="contacts">
+  <h1>Concerts</h1>
+   <div id="concerts">
         <table id="table">
             <tbody>
                 <tr>
@@ -21,7 +21,7 @@ window.handleConcertsRequest = () => {
     </div>`;
 
   // make sure the backend api works before working with it here
-  fetch("/api/concerts")
+  fetch("../../backend/api/concerts")
     .then((response) => response.json())
     .then((concerts) => renderConcerts(concerts));
 };

@@ -1,7 +1,7 @@
 // @ts-ignore
 window.handleConcertRequest = (params) => {
   document.body.innerHTML = `
-  <h1>Contact with id ${params.id}</h1>`;
+  <h1>concert with id ${params.id}</h1>`;
 
     const api = `/api/concerts/${params.id}`;
     fetch(api)
